@@ -40,7 +40,7 @@ h6 {
 }
 
 .container {
-  width: 1230px;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -92,6 +92,11 @@ h6 {
   color: var(--black);
 }
 
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
 .footer-logo span {
   color: var(--white);
 }
@@ -128,6 +133,27 @@ h6 {
   color: var(--accent-color);
 }
 
+/* sections */
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  outline: 1px solid blue;
+}
+
+.title,
+.section-title {
+  color: var(--title-text-color);
+}
+
+.section-title {
+  font-weight: var(--title-font-weight);
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
 /* Hero */
 
 .hero {
@@ -137,7 +163,7 @@ h6 {
 }
 
 .hero-title {
-   margin-bottom: 30px;
+  margin-bottom: 30px;
   color: var(--white);
   font-weight: 900;
   font-size: 44px;
@@ -162,28 +188,9 @@ h6 {
   cursor: pointer;
 }
 
-/* sections */
-
-.section {
-  outline: 1px solid red;
-}
-
-.title,
-.section-title {
-  color: var(--title-text-color);
-}
-
-.section-title {
-  font-weight: var(--title-font-weight);
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-}
-
 .benefits,
 .team {
   background-color: var(--main-background-color);
-
 }
 
 .benefits .title {
@@ -191,11 +198,16 @@ h6 {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .benefits .text {
   font-size: 14px;
   line-height: 1.71;
+}
+
+.work {
+  padding-top: 0;
 }
 
 .team {
@@ -206,16 +218,26 @@ h6 {
   text-align: center;
 }
 
+.team img {
+  margin-bottom: 30px;
+}
+
 .team .title {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
+  margin-bottom: 10px;
+}
+
+.team .text {
+  margin-bottom: 30px;
 }
 
 /* footer */
 
 footer {
   background-color: var(--secondary-background-color);
+  padding: 60px 0;
 }
 
 address .link,
@@ -228,6 +250,7 @@ address .address-link {
 
 address .address-link {
   color: var(--white);
+  text-decoration: none;
 }
 
 address .link:hover,
@@ -235,9 +258,23 @@ address .link:focus {
   color: var(--accent-color);
 }
 
+address .list li {
+  margin-bottom: 9px;
+}
+
+address .list li:last-child {
+  margin-bottom: 0;
+}
+
 /* portfolio */
 
+.portfolio-filter {
+  margin-bottom: 34px;
+}
+
 .portfolio-filter button {
+  min-width: 73px;
+  padding: 6px 25px;
   color: var(--title-text-color);
   background-color: #f5f5f5;
   border: 0;
@@ -257,18 +294,35 @@ address .link:focus {
   border-radius: 4px;
 }
 
-.examples .link {
-  color: inherit;
+.examples li {
+  padding-bottom: 20px;
 }
 
+.examples .link {
+    color: inherit;
+}
+
+.examples img {
+  margin-bottom: 20px;
+}
+
+.examples .title, 
+.examples .text {
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+
 .examples .title {
+  margin-bottom: 4px;
   font-weight: var(--title-font-weight);
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-}
+  }
 
 .examples .text {
   font-size: 16px;
   line-height: 1.87;
 }
+

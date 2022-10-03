@@ -46,7 +46,7 @@ h6 {
   margin-left: auto;
   margin-right: auto;
 
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 }
 
 .list {
@@ -88,7 +88,7 @@ h6 {
   line-height: 1.19;
 }
 
-.logo span {
+.logo .header-logo {
   color: var(--black);
 }
 
@@ -103,7 +103,34 @@ h6 {
 
 /* header */
 
+header {
+  border-bottom: 1px solid #ececec;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav {
+  display: flex;
+  margin-left: 92px;
+}
+
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -116,7 +143,20 @@ h6 {
   color: var(--accent-color);
 }
 
+.header-contaсts {
+  display: flex;
+  margin-left: auto;
+}
+
+.header-contaсts .item + .item {
+  margin-left: 50px;
+}
+
 .header-contaсts .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: inherit;
   font-weight: 500;
   font-size: 14px;
@@ -133,33 +173,12 @@ h6 {
   color: var(--accent-color);
 }
 
-/* sections */
-
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-  outline: 1px solid blue;
-}
-
-.title,
-.section-title {
-  color: var(--title-text-color);
-}
-
-.section-title {
-  font-weight: var(--title-font-weight);
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  margin-bottom: 50px;
-}
-
 /* Hero */
 
 .hero {
   background-color: var(--secondary-background-color);
   text-align: center;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 }
 
 .hero-title {
@@ -178,6 +197,8 @@ h6 {
   border: 1px solid transparent;
   border-radius: 4px;
   padding: 10px 32px;
+  margin-bottom: 200px;
+
   background-color: var(--accent-color);
   color: var(--white);
   font-family: inherit;
@@ -188,9 +209,42 @@ h6 {
   cursor: pointer;
 }
 
+/* sections */
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  /* outline: 1px solid blue; */
+}
+
+.title,
+.section-title {
+  color: var(--title-text-color);
+}
+
+.section-title {
+  font-weight: var(--title-font-weight);
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
 .benefits,
 .team {
   background-color: var(--main-background-color);
+}
+
+.benefits .list,
+.work .list,
+.team .list {
+  display: flex;
+}
+
+.benefits .item:not(:last-child),
+.work .item:not(:last-child),
+.team .item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .benefits .title {
@@ -216,6 +270,12 @@ h6 {
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
+}
+
+.team .item {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team img {
@@ -258,21 +318,19 @@ address .link:focus {
   color: var(--accent-color);
 }
 
-address .list li {
+address .item:not(:last-child) {
   margin-bottom: 9px;
-}
-
-address .list li:last-child {
-  margin-bottom: 0;
 }
 
 /* portfolio */
 
 .portfolio-filter {
+  display: flex;
   margin-bottom: 34px;
+  justify-content: center;
 }
 
-.portfolio-filter button {
+.portfolio-filter .bnt {
   min-width: 73px;
   padding: 6px 25px;
   color: var(--title-text-color);
@@ -286,32 +344,43 @@ address .list li:last-child {
   cursor: pointer;
 }
 
-.portfolio-filter button:hover,
-.portfolio-filter button:focus {
+.portfolio-filter .item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.portfolio-filter .bnt:hover,
+.portfolio-filter .bnt:focus {
   color: var(--white);
   background-color: var(--accent-color);
   border-color: var(--accent-color);
   border-radius: 4px;
 }
 
-.examples li {
+.examples {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+.examples .item {
+  width: 370px;
+  margin: 15px;
   padding-bottom: 20px;
 }
 
 .examples .link {
-    color: inherit;
+  color: inherit;
 }
 
 .examples img {
   margin-bottom: 20px;
 }
 
-.examples .title, 
+.examples .title,
 .examples .text {
   margin-left: 24px;
   margin-right: 24px;
 }
-
 
 .examples .title {
   margin-bottom: 4px;
@@ -319,10 +388,9 @@ address .list li:last-child {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  }
+}
 
 .examples .text {
   font-size: 16px;
   line-height: 1.87;
 }
-

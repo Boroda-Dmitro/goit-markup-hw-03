@@ -26,7 +26,7 @@ body {
   background-color: var(--primary-background-color);
   color: var(--primary-text-color);
   letter-spacing: 0.03em;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 h1,
@@ -34,13 +34,22 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+ul,
+p {
   margin-top: 0;
   margin-bottom: 0;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
-  width: 1200px;
+  width: 100%;
+  max-width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -82,7 +91,7 @@ h6 {
 
 .logo {
   color: var(--accent-color);
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: var(--title-font-weight);
   font-size: 26px;
   line-height: 1.19;
@@ -103,7 +112,7 @@ h6 {
 
 /* header */
 
-header {
+.site-header {
   border-bottom: 1px solid #ececec;
 }
 
@@ -295,7 +304,7 @@ header {
 
 /* footer */
 
-footer {
+.site-footer {
   background-color: var(--secondary-background-color);
   padding: 60px 0;
 }
@@ -366,6 +375,7 @@ address .item:not(:last-child) {
   width: 370px;
   margin: 15px;
   padding-bottom: 20px;
+  border: 1px solid #eeeeee;
 }
 
 .examples .link {
@@ -376,8 +386,7 @@ address .item:not(:last-child) {
   margin-bottom: 20px;
 }
 
-.examples .title,
-.examples .text {
+.examples-info {
   margin-left: 24px;
   margin-right: 24px;
 }

@@ -187,10 +187,15 @@ img {
 .hero {
   background-color: var(--secondary-background-color);
   text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
   /* outline: 1px solid red; */
 }
 
 .hero-title {
+  display: block;
+  margin: 0 auto;
+  max-width: 696px;
   margin-bottom: 30px;
   color: var(--white);
   font-weight: 900;
@@ -206,7 +211,6 @@ img {
   border: 1px solid transparent;
   border-radius: 4px;
   padding: 10px 32px;
-  margin-bottom: 200px;
 
   background-color: var(--accent-color);
   color: var(--white);
@@ -287,10 +291,6 @@ img {
   border-radius: 0px 0px 4px 4px;
 }
 
-.team img {
-  margin-bottom: 30px;
-}
-
 .team .title {
   font-weight: 500;
   font-size: 16px;
@@ -298,8 +298,9 @@ img {
   margin-bottom: 10px;
 }
 
-.team .text {
-  margin-bottom: 30px;
+.team-info {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 /* footer */
@@ -335,7 +336,7 @@ address .item:not(:last-child) {
 
 .portfolio-filter {
   display: flex;
-  margin-bottom: 34px;
+  margin-bottom: 50px;
   justify-content: center;
 }
 
@@ -374,7 +375,6 @@ address .item:not(:last-child) {
 .examples .item {
   width: 370px;
   margin: 15px;
-  padding-bottom: 20px;
   border: 1px solid #eeeeee;
 }
 
@@ -382,13 +382,8 @@ address .item:not(:last-child) {
   color: inherit;
 }
 
-.examples img {
-  margin-bottom: 20px;
-}
-
 .examples-info {
-  margin-left: 24px;
-  margin-right: 24px;
+  padding: 20px 24px;
 }
 
 .examples .title {
